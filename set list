@@ -1,0 +1,20 @@
+list1 = [1, 2, 3, 4, 5]
+list2 = [1, 2, 3, 4, 5]
+list3 = [1, 2, 2, 3, 3, 4, 5]
+
+if len(list1) == len(list2) == len(list3):
+    if set(list1) == set(list2) == set(list3):
+        print("Zawierają te same elementy")
+    elif set(list1) == set(list2) != set(list3):
+        print('Lista 3 zawiera inny element')
+    elif set(list1) == set(list3) != set(list2):
+        print('lista 2 zawiera inny element')
+    elif set(list3) == set(list2) != set(list1):
+        print('lista 1 zawiera inny element')
+        
+elif len(list1) == len(list2) != len(list3):
+    print('Wszystkie listy zawierają te same elementy, lista3 zawiera duplikaty. ')
+elif len(list1) == len(list3) != len(list2):
+    print('Wszystkie listy zawierają te same elementy, lista2 zawiera duplikaty. ')
+elif len(list3) == len(list2) != len(list1):
+    print('Wszystkie listy zawierają te same elementy, lista1 zawiera duplikaty. ')
